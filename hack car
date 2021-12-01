@@ -1,0 +1,217 @@
+local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+local hint = Instance.new("Hint",game.Players.LocalPlayer.PlayerGui)
+   hint.Text = "start anti afk"
+   hint.Name = game.JobId
+   wait(3)
+   hint:Destroy()
+maxspeed = 347
+local flycar = Instance.new("ScreenGui")
+local veryepic = Instance.new("Frame")
+local background = Instance.new("TextLabel")
+local title = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local fly = Instance.new("TextButton")
+local toogle = Instance.new("TextLabel")
+local notice = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+flycar.Name = "flycar"
+flycar.Parent = game.CoreGui
+
+veryepic.Name = "veryepic"
+veryepic.Parent = flycar
+veryepic.BackgroundColor3 = Color3.fromRGB(0,0, 0)
+veryepic.Position = UDim2.new(0.038906455, 0, 0.619164586, 0)
+veryepic.Size = UDim2.new(0, 243, 0, 263)
+veryepic.Active = true
+veryepic.Draggable = true
+
+background.Name = "background"
+background.Parent = veryepic
+background.BackgroundColor3 = Color3.fromRGB(255,255,255)
+background.Position = UDim2.new(0.0370370373, 0, 0.0304182507, 0)
+background.Size = UDim2.new(0, 224, 0, 246)
+background.Font = Enum.Font.SourceSans
+background.Text = ""
+background.TextColor3 = Color3.fromRGB(0, 0, 0)
+background.TextSize = 14.000
+
+title.Name = "title"
+title.Parent = veryepic
+title.BackgroundColor3 = Color3.fromRGB(255,255,255)
+title.BackgroundTransparency = 1.000
+title.Position = UDim2.new(0.0864197537, 0, 0.0798479095, 0)
+title.Size = UDim2.new(0, 163, 0, 28)
+title.Font = Enum.Font.SciFi
+title.Text = "z_z (hack by x_x and z_z)"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+
+close.Name = "close"
+close.Parent = veryepic
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.Position = UDim2.new(0.806584358, 0, 0.064638786, 0)
+close.Size = UDim2.new(0, 30, 0, 33)
+close.Font = Enum.Font.GothamBlack
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14.000
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+veryepic.Visible = false
+end)
+
+fly.Name = "fly"
+fly.Parent = veryepic
+fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+fly.Position = UDim2.new(0.0864197537, 0, 0.266159713, 0)
+fly.Size = UDim2.new(0, 200, 0, 50)
+fly.Font = Enum.Font.SourceSans
+fly.Text = "press me to boost speed car"
+fly.TextColor3 = Color3.fromRGB(255,255,255)
+fly.TextScaled = true
+fly.TextSize = 14.000
+fly.TextWrapped = true
+fly.MouseButton1Down:connect(function()
+ local hint = Instance.new("Hint",game.Players.LocalPlayer.PlayerGui)
+   hint.Text = "hack by z_z"
+   hint.Name = game.JobId
+   wait(5)
+   hint:Destroy()
+repeat wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+local mouse = game.Players.LocalPlayer:GetMouse()
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer
+local torso = plr.Character.Torso
+local flying = true
+local deb = true
+local ctrl = {f = 0, b = 0, l = 0, r = 0}
+local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+local maxspeed = 900
+local speed = 0
+game:GetService("StarterGui"):SetCore(
+    "SendNotification",
+    {
+        Title = "boost speed by z_z";
+        Text = "By z_z"
+    }
+)game:GetService("StarterGui"):SetCore(
+    "SendNotification",
+    {
+        Title = "boost speed by z_z";
+        Text = "By z_z"
+    }
+)local UserInputService = game:GetService("UserInputService")
+local GuiService = game:GetService("GuiService")
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+game:GetService("RunService").Stepped:Connect(function()
+if GuiService.MenuIsOpen then
+return
+end
+if workspace.CurrentCamera.CameraSubject:IsDescendantOf(LocalPlayer.Character) then
+return
+end
+if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl
+) then
+workspace.CurrentCamera.CameraSubject:ApplyImpulse(
+workspace.CurrentCamera.CameraSubject.CFrame.LookVector * Vector3.new(-2e2,-2e2,-2e2)
+)
+end
+end)local UserInputService = game:GetService("UserInputService")
+local GuiService = game:GetService("GuiService")
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+game:GetService("RunService").Stepped:Connect(function()
+if GuiService.MenuIsOpen then
+return
+end
+if workspace.CurrentCamera.CameraSubject:IsDescendantOf(LocalPlayer.Character) then
+return
+end
+if UserInputService:IsKeyDown(Enum.KeyCode.W
+) then
+workspace.CurrentCamera.CameraSubject:ApplyImpulse(
+workspace.CurrentCamera.CameraSubject.CFrame.LookVector * Vector3.new(2e1,2e1,2e1)
+)
+end
+end)local UserInputService = game:GetService("UserInputService")
+local GuiService = game:GetService("GuiService")
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+game:GetService("RunService").Stepped:Connect(function()
+if GuiService.MenuIsOpen then
+return
+end
+if workspace.CurrentCamera.CameraSubject:IsDescendantOf(LocalPlayer.Character) then
+return
+end
+if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift
+) then
+workspace.CurrentCamera.CameraSubject:ApplyImpulse(
+workspace.CurrentCamera.CameraSubject.CFrame.LookVector * Vector3.new(2e2,2e2,2e2)
+)
+
+end
+end)mouse.KeyDown:connect(function(key)
+if key:lower() == "z" then
+if flying then flying = false
+else
+flying = true
+Fly()
+end
+elseif key:lower() == "," then
+ctrl.f = game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.localPlayer)
+elseif key:lower() == "," then
+ctrl.b = game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.localPlayer)
+elseif key:lower() == "," then
+ctrl.l = game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.localPlayer)
+elseif key:lower() == "," then
+ctrl.r = game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.localPlayer)
+end
+end)
+Fly()
+end)
+
+toogle.Name = "Toggle"
+toogle.Parent = veryepic
+toogle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+toogle.Position = UDim2.new(0.0864197537, 0, 0.444867015, 0)
+toogle.Size = UDim2.new(0, 200, 0, 29)
+toogle.Font = Enum.Font.SourceSans
+toogle.Text = "Press z to Toggle"
+toogle.TextColor3 = Color3.fromRGB(0, 0, 0)
+toogle.TextSize = 14.000
+
+notice.Name = "notice"
+notice.Parent = veryepic
+notice.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+notice.Position = UDim2.new(0.0864197537, 0, 0.585551441, 0)
+notice.Size = UDim2.new(0, 200, 0, 29)
+notice.Font = Enum.Font.GothamBlack
+notice.Text = "zzzzz___zzzzz"
+notice.TextColor3 = Color3.fromRGB(0, 0, 0)
+notice.TextScaled = true
+notice.TextSize = 14.000
+notice.TextWrapped = true
+
+TextLabel.Parent = veryepic
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(0.0864197537, 0, 0.749049425, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "Made by z_z_israel"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
